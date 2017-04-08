@@ -1,0 +1,14 @@
+cd
+cd flink-1.2.0/conf
+sed -i "62 c\parallelism.default: $1" flink-conf.yaml
+cd ..
+rm /home/kyw14/wordcount-result.txt
+bin/flink run ./examples/batch/WordCount.jar --input /home/kyw14/$2.txt --output /home/kyw14/wordcount-result.txt
+rm /home/kyw14/wordcount-result.txt
+bin/flink run ./examples/batch/WordCount.jar --input /home/kyw14/$2.txt --output /home/kyw14/wordcount-result.txt
+rm /home/kyw14/wordcount-result.txt
+bin/flink run ./examples/batch/WordCount.jar --input /home/kyw14/$2.txt --output /home/kyw14/wordcount-result.txt
+rm /home/kyw14/wordcount-result.txt
+bin/flink run ./examples/batch/WordCount.jar --input /home/kyw14/$2.txt --output /home/kyw14/wordcount-result.txt
+rm /home/kyw14/wordcount-result.txt
+bin/flink run ./examples/batch/WordCount.jar --input /home/kyw14/$2.txt --output /home/kyw14/wordcount-result.txt
