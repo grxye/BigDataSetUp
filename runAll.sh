@@ -1,0 +1,16 @@
+bash oneCombo.sh 120 batch false 0.5 r1
+bash oneCombo.sh 120 batch false 0.8 r2
+bash oneCombo.sh 120 batch true 0.5 r3
+bash oneCombo.sh 120 batch true 0.8 r4
+bash oneCombo.sh 120 streaming false 0.5 r5
+bash oneCombo.sh 120 streaming false 0.8 r6
+bash oneCombo.sh 120 streaming true 0.5 r7
+bash oneCombo.sh 120 streaming true 0.8 r8
+bash oneCombo.sh 1G batch false 0.5 r9
+bash oneCombo.sh 1G batch false 0.8 r10
+bash oneCombo.sh 1G batch true 0.5 r11
+bash oneCombo.sh 1G batch true 0.8 r12
+bash oneCombo.sh 1G streaming false 0.5 r13
+bash oneCombo.sh 1G streaming false 0.8 r14
+bash oneCombo.sh 1G streaming true 0.5 r15
+bash oneCombo.sh 1G streaming true 0.8 r16
