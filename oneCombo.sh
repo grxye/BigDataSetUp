@@ -17,5 +17,5 @@ rm /data/wordcount-result.txt
 bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
 echo "$5" >> /data/allResults.txt
 echo $'\n' >> /data/allResults.txt
-grep 'Job Runtime:' $5.txt >> /data/allResults.txt
+grep 'Job Runtime:' /data/$5.txt >> /data/allResults.txt
 echo $'\n\n' >> /data/allResults.txt
