@@ -6,15 +6,15 @@ cd ..
 bin/stop-local.sh
 bin/start-local.sh
 rm /data/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
 rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
 rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
 rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
 rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
-echo $'$5 \n' >> allResults.txt
-grep 'Job Runtime:' >> allResults.txt
-echo $'\n\n' >> allResults.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
+echo $'$5 \n' >> /data/allResults.txt
+grep 'Job Runtime:' >> /data/allResults.txt
+echo $'\n\n' >> /data/allResults.txt
