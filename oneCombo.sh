@@ -5,13 +5,13 @@ sed -i "63 c\taskmanager.memory.fraction: $4" flink-conf.yaml
 cd ..
 bin/stop-local.sh
 bin/start-local.sh
+rm /data/wordcount-result.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
 rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /home/kyw14/wordcount-result.txt >> $5.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
 rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /home/kyw14/wordcount-result.txt >> $5.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
 rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /home/kyw14/wordcount-result.txt >> $5.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
 rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /home/kyw14/wordcount-result.txt >> $5.txt
-rm /home/kyw14/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /home/kyw14/wordcount-result.txt >> $5.txt
+bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> $5.txt
