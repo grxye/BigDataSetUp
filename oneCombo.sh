@@ -5,17 +5,11 @@ sed -i "63 c\taskmanager.memory.fraction: $4" flink-conf.yaml
 cd ..
 bin/stop-local.sh
 bin/start-local.sh
-rm /data/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
-rm /data/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
-rm /data/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
-rm /data/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
-rm /data/wordcount-result.txt
-bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
-echo "$5" >> /data/allResults.txt
-echo $'\n' >> /data/allResults.txt
+for i in 1 2 3 4 5
+do
+    rm /data/wordcount-result.txt
+    bin/flink run ./examples/$2/WordCount.jar --input /home/kyw14/$1.txt --output /data/wordcount-result.txt >> /data/$5.txt
+done
+
 grep 'Job Runtime:' /data/$5.txt >> /data/allResults.txt
 echo $'\n\n' >> /data/allResults.txt
